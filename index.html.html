@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Trade Solutions | Complete A-to-Z Import & Export Services</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0b132b',
+                            900: '#070b19',
+                            950: '#030611',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030611;
+            color: #f3f4f6;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-panel {
+            background: rgba(11, 19, 43, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(245, 158, 11, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(245, 158, 11, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(245, 158, 11, 0.15);
+        }
+
+        /* Glowing accents */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #b45309 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-button {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            transition: all 0.3s ease;
+        }
+
+        .gold-button:hover {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030611;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+
+        /* Animated World Map Route Lines */
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -40;
+            }
+        }
+        .route-line {
+            stroke-dasharray: 8, 8;
+            animation: dash 2s linear infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col gap-3"></div>
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600 text-slate-950 font-semibold text-xs md:text-sm py-2 px-4 text-center flex justify-between items-center z-50 relative">
+        <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
+            <span class="flex items-center gap-2 mx-auto md:mx-0">
+                <i class="fa-solid fa-circle-check text-slate-950"></i>
+                <span>Direct Port Operations & Customs Clearance Support Across All Major Indian Ports & Airports</span>
+            </span>
+            <div class="hidden md:flex items-center gap-6 text-xs font-bold">
+                <a href="tel:+919876543210" class="hover:underline flex items-center gap-1">
+                    <i class="fa-solid fa-phone"></i> +91 98765 43210
+                </a>
+                <a href="mailto:info@bharattradesolutions.com" class="hover:underline flex items-center gap-1">
+                    <i class="fa-solid fa-envelope"></i> docs@bharattradesolutions.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-40 glass-panel border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 font-extrabold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-ship"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-wider text-white block uppercase leading-none">Bharat Trade</span>
+                        <span class="text-xs text-amber-400 font-medium tracking-widest block mt-1 uppercase">Solutions</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                    <a href="#services" class="hover:text-amber-400 transition-colors">Services & Compliance</a>
+                    <a href="#calculator" class="hover:text-amber-400 transition-colors">Trade Estimator</a>
+                    <a href="#routes" class="hover:text-amber-400 transition-colors">Cargo Routes</a>
+                    <a href="#consulting" class="hover:text-amber-400 transition-colors">Exim Knowledge Hub</a>
+                    <a href="#faqs" class="hover:text-amber-400 transition-colors">FAQs</a>
+                </div>
+
+                <!-- Call to Action Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <button onclick="openModal('quickQuoteModal')" class="gold-button text-slate-950 font-bold px-5 py-2.5 rounded-lg text-sm flex items-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-file-signature"></i>
+                        <span>Request Custom Quote</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex lg:hidden">
+                    <button id="mobileMenuBtn" class="text-slate-300 hover:text-amber-400 p-2 text-xl focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#services" class="mobile-link block text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800">Services & Compliance</a>
+            <a href="#calculator" class="mobile-link block text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800">Trade Estimator</a>
+            <a href="#routes" class="mobile-link block text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800">Cargo Routes</a>
+            <a href="#consulting" class="mobile-link block text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800">Exim Knowledge Hub</a>
+            <a href="#faqs" class="mobile-link block text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800">FAQs</a>
+            <button onclick="openModal('quickQuoteModal')" class="w-full gold-button text-slate-950 font-bold py-3 rounded-lg text-center mt-4">
+                Request Custom Quote
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] pt-12 pb-20 overflow-hidden flex items-center">
+        <!-- Background Grid Graphic -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Copy -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                        A-to-Z India Export & Import Partner
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Seamless Custom Clearance & <span class="gold-gradient-text">Global Logistics.</span>
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                        Eliminate port delays, compliance headaches, and complex shipping documentation. Bharat Trade Solutions provides end-to-end import & export execution, IEC registration, LC compliance, and freight forwarding.
+                    </p>
+
+                    <!-- Trust Highlights -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 py-3 border-y border-slate-800 text-slate-300 text-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-amber-400 text-lg"></i>
+                            <span>100% Customs Compliance</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock-rotate-left text-amber-400 text-lg"></i>
+                            <span>Fast Port Turnaround</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-passport text-amber-400 text-lg"></i>
+                            <span>Complete Documentation</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Call-to-Actions -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <button onclick="openModal('quickQuoteModal')" class="gold-button text-slate-950 font-bold px-8 py-4 rounded-xl text-base flex items-center justify-center gap-3 shadow-xl">
+                            <span>Get Consultation & Rate Quote</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <a href="#calculator" class="bg-slate-800/80 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-xl text-base border border-slate-700 flex items-center justify-center gap-2 transition-colors">
+                            <i class="fa-solid fa-calculator text-amber-400"></i>
+                            <span>Duty & Route Estimator</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Interactive Duty & Shipping Route Estimator Widget -->
+                <div class="lg:col-span-5" id="calculator">
+                    <div class="glass-card rounded-2xl p-6 shadow-2xl relative">
+                        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                            <div>
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <i class="fa-solid fa-calculator text-amber-400"></i> Trade & Duty Estimator
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-0.5">Instant estimation for customs & shipping timelines</p>
+                            </div>
+                            <span class="text-xs font-mono bg-amber-500/20 text-amber-300 px-2 py-1 rounded border border-amber-500/30">V2.4 Live</span>
+                        </div>
+
+                        <form id="tradeEstimatorForm" class="space-y-4 text-xs sm:text-sm">
+                            <!-- Trade Type & Category -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-slate-300 font-medium mb-1">Trade Direction</label>
+                                    <select id="estTradeType" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white focus:border-amber-400 focus:outline-none">
+                                        <option value="import">Import to India</option>
+                                        <option value="export">Export from India</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-slate-300 font-medium mb-1">Cargo Category</label>
+                                    <select id="estCargoCategory" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white focus:border-amber-400 focus:outline-none">
+                                        <option value="machinery">Industrial Machinery (7.5%-10%)</option>
+                                        <option value="textiles">Textiles & Garments (10%-20%)</option>
+                                        <option value="electronics">Electronics & Tech (10%-15%)</option>
+                                        <option value="chemicals">Chemicals & Polymers (7.5%-10%)</option>
+                                        <option value="food">Agro & Food Products (15%-30%)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Value Input & Mode -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-slate-300 font-medium mb-1">Cargo Value (INR ₹)</label>
+                                    <input type="number" id="estCargoValue" placeholder="e.g. 1000000" value="1000000" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white focus:border-amber-400 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-slate-300 font-medium mb-1">Transport Mode</label>
+                                    <select id="estMode" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white focus:border-amber-400 focus:outline-none">
+                                        <option value="sea">Sea Freight (FCL/LCL)</option>
+                                        <option value="air">Air Cargo Express</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Destination Region -->
+                            <div>
+                                <label class="block text-slate-300 font-medium mb-1">Partner Region</label>
+                                <select id="estRegion" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white focus:border-amber-400 focus:outline-none">
+                                    <option value="asia">East Asia / China / SE Asia</option>
+                                    <option value="middleeast">Middle East / UAE / GCC</option>
+                                    <option value="europe">Europe & UK</option>
+                                    <option value="americas">North America (USA & Canada)</option>
+                                    <option value="africa">Africa</option>
+                                </select>
+                            </div>
+
+                            <button type="button" onclick="calculateEstimate()" class="w-full bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/40 font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                Calculate Duties & Transit Time
+                            </button>
+                        </form>
+
+                        <!-- Estimator Output Box -->
+                        <div id="estimatorResult" class="mt-4 p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-slate-400">Est. Customs Duty Range:</span>
+                                <span id="resDutyRange" class="font-bold text-amber-400 text-sm">₹75,000 - ₹1,000,000</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-slate-400">Avg. Customs Clearance:</span>
+                                <span id="resClearanceTime" class="font-bold text-white">24 - 48 Hours</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-slate-400">Transit Duration:</span>
+                                <span id="resTransitTime" class="font-bold text-white">12 - 18 Days (Sea)</span>
+                            </div>
+                            <div class="pt-2 border-t border-slate-800 flex justify-between items-center">
+                                <span class="text-[11px] text-slate-400">Need precise HNS Code verification?</span>
+                                <button onclick="openModal('quickQuoteModal')" class="text-xs text-amber-400 font-bold hover:underline">
+                                    Ask Our Agent &rarr;
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics / Stats Bar -->
+    <section class="border-y border-slate-800 bg-navy-900/50 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-1">
+                    <p class="text-3xl lg:text-4xl font-extrabold text-amber-400 font-mono">15,000+</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Containers Cleared</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-3xl lg:text-4xl font-extrabold text-amber-400 font-mono">99.4%</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">On-Time Customs Pass</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-3xl lg:text-4xl font-extrabold text-amber-400 font-mono">65+</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Global Trade Partner Ports</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-3xl lg:text-4xl font-extrabold text-amber-400 font-mono">100%</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">A-to-Z Legal Compliance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-amber-400 tracking-widest uppercase">End-To-End Trade Execution</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Comprehensive Services for Exporters & Importers</h3>
+                <p class="text-slate-400 text-sm sm:text-base">We handle every bottleneck in international trade—from regulatory paperwork and customs clearance to freight booking and door-to-door delivery.</p>
+            </div>
+
+            <!-- 4 Main Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service 1 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-5">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Customs Clearance & Compliance</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Expert handling of Bill of Entry, Shipping Bills, HNS code classification, duty optimization, and port clearance across sea & air hubs.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Duty Drawback & Refund Claims</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Port & ICD Operations</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> FSSAI, BIS & Plant Quarantine</li>
+                        </ul>
+                    </div>
+                    <button onclick="openServiceDetail('customs')" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 font-semibold text-xs border border-slate-700 transition-colors">
+                        View Clearance Checklist &rarr;
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-5">
+                            <i class="fa-solid fa-passport"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Complete Trade Documentation</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Flawless documentation preparation to avoid bank discrepancies, customs hold-ups, or international shipment rejections.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> IEC Registration & AD Code Linkage</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Letter of Credit (LC) Compliance</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Certificate of Origin (COO)</li>
+                        </ul>
+                    </div>
+                    <button onclick="openServiceDetail('docs')" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 font-semibold text-xs border border-slate-700 transition-colors">
+                        View Required Docs &rarr;
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-5">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Global Logistics & Freight</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Competitive ocean container rates (FCL/LCL), express air freight, multimodals, and real-time shipment visibility.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> FCL / LCL Container Shipping</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Air Cargo Expedited Delivery</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Door-To-Door Cargo Transit</li>
+                        </ul>
+                    </div>
+                    <button onclick="openServiceDetail('logistics')" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 font-semibold text-xs border border-slate-700 transition-colors">
+                        Explore Transit Modes &rarr;
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-5">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">EXIM Business Consulting</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Step-by-step guidance for new entrepreneurs or existing businesses expanding into cross-border international trade.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Product & Buyer Market Analysis</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Govt Export Incentive Schemes</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Supplier Verification & Audits</li>
+                        </ul>
+                    </div>
+                    <button onclick="openServiceDetail('consulting')" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 font-semibold text-xs border border-slate-700 transition-colors">
+                        Get Consulting Plan &rarr;
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Trade Routes & Visual Cargo Hub -->
+    <section id="routes" class="py-20 bg-navy-900 border-y border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Global Freight Corridors</span>
+                    <h3 class="text-3xl font-extrabold text-white leading-tight">Connecting Indian Ports to Global Markets</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Bharat Trade Solutions operates across all key Indian sea ports (Nhava Sheva/JNPT, Mundra, Chennai, Kolkata, Cochin) and air cargo hubs (Delhi, Mumbai, Bengaluru).
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                            <i class="fa-solid fa-anchor text-amber-400 text-xl mt-1"></i>
+                            <div>
+                                <h5 class="text-sm font-bold text-white">Major Sea Ports Covered</h5>
+                                <p class="text-xs text-slate-400 mt-0.5">JNPT, Mundra, Hazira, Vizag, Tuticorin, Chennai Port</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                            <i class="fa-solid fa-plane-departure text-amber-400 text-xl mt-1"></i>
+                            <div>
+                                <h5 class="text-sm font-bold text-white">Air Cargo Terminals</h5>
+                                <p class="text-xs text-slate-400 mt-0.5">Delhi IGI, Mumbai CSIA, Bengaluru Airport, Hyderabad Air Hub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animated Interactive Trade Map Card -->
+                <div class="lg:col-span-7">
+                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                                <span class="text-xs font-mono font-bold text-slate-300">LIVE GLOBAL CARGO FLOW</span>
+                            </div>
+                            <span class="text-xs text-amber-400 font-mono">INDIA HQ HUB</span>
+                        </div>
+
+                        <!-- SVG Trade Routes Map Illustration -->
+                        <div class="relative w-full aspect-video bg-slate-950/80 rounded-xl border border-slate-800 overflow-hidden flex items-center justify-center">
+                            <svg class="w-full h-full p-4" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Subtle Background Grid Dots -->
+                                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <circle cx="2" cy="2" r="1" fill="#1e293b" />
+                                </pattern>
+                                <rect width="800" height="400" fill="url(#grid)" />
+
+                                <!-- India Hub Point -->
+                                <g transform="translate(480, 210)">
+                                    <circle r="12" fill="#f59e0b" fill-opacity="0.2" class="animate-ping" />
+                                    <circle r="6" fill="#f59e0b" />
+                                    <text x="12" y="4" fill="#ffffff" font-size="12" font-weight="bold">India (HQ)</text>
+                                </g>
+
+                                <!-- Destination Points -->
+                                <!-- Dubai / Middle East -->
+                                <circle cx="380" cy="190" r="4" fill="#38bdf8" />
+                                <text x="320" y="180" fill="#cbd5e1" font-size="10">Middle East (UAE)</text>
+                                
+                                <!-- Europe (Rotterdam/Hamburg) -->
+                                <circle cx="280" cy="120" r="4" fill="#38bdf8" />
+                                <text x="220" y="110" fill="#cbd5e1" font-size="10">Europe Ports</text>
+
+                                <!-- USA East Coast -->
+                                <circle cx="120" cy="140" r="4" fill="#38bdf8" />
+                                <text x="60" y="130" fill="#cbd5e1" font-size="10">USA / NYC</text>
+
+                                <!-- East Asia (Singapore/Shanghai) -->
+                                <circle cx="640" cy="240" r="4" fill="#38bdf8" />
+                                <text x="650" y="250" fill="#cbd5e1" font-size="10">SE Asia / East Asia</text>
+
+                                <!-- Animated Route Lines from India -->
+                                <path d="M480 210 Q 430 200 380 190" stroke="#f59e0b" stroke-width="2" class="route-line" />
+                                <path d="M480 210 Q 380 150 280 120" stroke="#f59e0b" stroke-width="2" class="route-line" />
+                                <path d="M480 210 Q 280 100 120 140" stroke="#f59e0b" stroke-width="2" class="route-line" />
+                                <path d="M480 210 Q 560 225 640 240" stroke="#f59e0b" stroke-width="2" class="route-line" />
+                            </svg>
+
+                            <!-- Overlay Route Status Cards -->
+                            <div class="absolute bottom-3 left-3 right-3 grid grid-cols-3 gap-2 text-[10px] sm:text-xs">
+                                <div class="bg-slate-900/90 border border-slate-800 p-2 rounded text-center">
+                                    <span class="text-slate-400 block">Jebel Ali (UAE)</span>
+                                    <span class="text-amber-400 font-bold">3-5 Days Transit</span>
+                                </div>
+                                <div class="bg-slate-900/90 border border-slate-800 p-2 rounded text-center">
+                                    <span class="text-slate-400 block">Rotterdam (EU)</span>
+                                    <span class="text-amber-400 font-bold">18-22 Days Transit</span>
+                                </div>
+                                <div class="bg-slate-900/90 border border-slate-800 p-2 rounded text-center">
+                                    <span class="text-slate-400 block">US West/East</span>
+                                    <span class="text-amber-400 font-bold">24-30 Days Transit</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Exim A-to-Z Knowledge & Consulting Section -->
+    <section id="consulting" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden bg-gradient-to-br from-navy-800 via-navy-900 to-slate-950 border border-amber-500/20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    
+                    <div class="space-y-6">
+                        <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-widest border border-amber-500/30">New To Import-Export?</span>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                            We Turn Your Local Business Into an <span class="gold-gradient-text">International Brand</span>
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Starting an export business can be overwhelming with customs codes, GST refunds, DGFT policies, and bank compliance. Our experts handhold you through every stage.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                                <span class="text-amber-400 font-bold text-sm block mb-1">Step 1: Licensing</span>
+                                <p class="text-xs text-slate-400">IEC setup, RCMC registration with EPCs, and AD Code linking with bank.</p>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                                <span class="text-amber-400 font-bold text-sm block mb-1">Step 2: Buyer Contracting</span>
+                                <p class="text-xs text-slate-400">Incoterms advice (FOB, CIF, DDP) and secure Letter of Credit verification.</p>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                                <span class="text-amber-400 font-bold text-sm block mb-1">Step 3: Port Clearance</span>
+                                <p class="text-xs text-slate-400">HNS code mapping, customs examination, and smooth container loading.</p>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                                <span class="text-amber-400 font-bold text-sm block mb-1">Step 4: Govt Benefits</span>
+                                <p class="text-xs text-slate-400">Claiming RoDTEP, Duty Drawback, and eBRC realization directly to your account.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consultation Request Mini Form -->
+                    <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4">
+                        <h4 class="text-xl font-bold text-white text-center">Book a Free 1-on-1 EXIM Consultation</h4>
+                        <p class="text-xs text-slate-400 text-center">Speak with our certified customs house agent (CHA) team today.</p>
+
+                        <form id="consultationForm" onsubmit="handleConsultationSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Your Full Name</label>
+                                <input type="text" required placeholder="e.g. Rahul Sharma" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-300 mb-1">Mobile / WhatsApp</label>
+                                    <input type="tel" required placeholder="+91 9876543210" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-300 mb-1">Query Subject</label>
+                                    <select class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+                                        <option>New IEC / Registration</option>
+                                        <option>Customs Clearance Support</option>
+                                        <option>Freight Quote Request</option>
+                                        <option>LC & Banking Compliance</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Cargo / Product Details</label>
+                                <textarea rows="3" placeholder="Describe your product (e.g. Rice, Spices, Textiles, Machinery parts)..." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gold-button text-slate-950 font-bold py-3 rounded-lg text-sm transition-transform active:scale-95 shadow-lg">
+                                Connect With EXIM Advisor
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faqs" class="py-20 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Clear Answers</span>
+                <h3 class="text-3xl font-extrabold text-white mt-1">Frequently Asked Trade Questions</h3>
+            </div>
+
+            <!-- Accordions -->
+            <div class="space-y-4">
+                
+                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-semibold text-white flex justify-between items-center hover:text-amber-400 transition-colors">
+                        <span>What documents are essential to start exporting from India?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-900">
+                        To export from India, you primarily need an Import Export Code (IEC) issued by the DGFT, an Authorized Dealer (AD) Code linked to your bank and port of export, GST registration, RCMC (Registration cum Membership Certificate) from the relevant Export Promotion Council, Commercial Invoice, Packing List, and Bill of Lading/Airway Bill. Bharat Trade Solutions handles all these setup processes end-to-end.
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-semibold text-white flex justify-between items-center hover:text-amber-400 transition-colors">
+                        <span>How fast can you clear imported cargo at major sea ports?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-900">
+                        With prior documentation filing (Faceless Assessment & Advance Bill of Entry), standard sea cargo is cleared within 24 to 48 hours of vessel discharge at major ports like JNPT, Mundra, and Chennai, avoiding demurrage and detention charges. Air cargo clearance can often be completed within 12-24 hours.
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-semibold text-white flex justify-between items-center hover:text-amber-400 transition-colors">
+                        <span>Can Bharat Trade Solutions help us claim RoDTEP and Duty Drawback?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-900">
+                        Yes! We ensure your Shipping Bills are filed with accurate HNS codes and claim flags so that government incentives like RoDTEP (Remission of Duties and Taxes on Exported Products), Duty Drawback, and GST refund scrolls are seamlessly generated and credited directly to your bank account.
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-semibold text-white flex justify-between items-center hover:text-amber-400 transition-colors">
+                        <span>What is HNS Code classification and why is it critical?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-900">
+                        The Harmonized System of Nomenclature (HSN / HNS) is an international 8-digit product code used to determine customs duty rates, GST, import policies, and regulatory permissions. Incorrect HNS code declarations can trigger heavy penalties, customs seizures, or delays. Our CHA experts double-check every item before filing.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+                
+                <!-- Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-extrabold text-lg">
+                            <i class="fa-solid fa-ship"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-wider">BHARAT TRADE SOLUTIONS</span>
+                    </div>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+                        India's premier B2B import-export service agency. Simplifying international trade documentation, customs clearance, sea & air freight, and global expansion for Indian businesses.
+                    </p>
+                    <div class="flex items-center gap-3 text-slate-400 text-base pt-2">
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-900 hover:bg-amber-500 hover:text-black flex items-center justify-center transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-900 hover:bg-amber-500 hover:text-black flex items-center justify-center transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-900 hover:bg-amber-500 hover:text-black flex items-center justify-center transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white uppercase tracking-wider">Services</h5>
+                    <ul class="text-xs space-y-2 text-slate-400">
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">Customs Clearance</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">IEC & AD Code Registration</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">Ocean Freight (FCL/LCL)</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">Air Cargo Expedited</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">Certificate of Origin (COO)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Compliance Links -->
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white uppercase tracking-wider">Trade Hub</h5>
+                    <ul class="text-xs space-y-2 text-slate-400">
+                        <li><a href="#calculator" class="hover:text-amber-400 transition-colors">Duty Calculator</a></li>
+                        <li><a href="#routes" class="hover:text-amber-400 transition-colors">Port Coverage</a></li>
+                        <li><a href="#consulting" class="hover:text-amber-400 transition-colors">Exim Consulting</a></li>
+                        <li><a href="#faqs" class="hover:text-amber-400 transition-colors">FAQs & Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white uppercase tracking-wider">Corporate Office</h5>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Trade Tower, Marine Lines, Nariman Point, Mumbai, Maharashtra - 400021, India
+                    </p>
+                    <p class="text-xs text-amber-400 font-bold">
+                        <i class="fa-solid fa-phone me-1"></i> +91 98765 43210<br>
+                        <i class="fa-solid fa-envelope me-1 mt-1"></i> docs@bharattradesolutions.com
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Bharat Trade Solutions. All Rights Reserved. Complete Import & Export Logistics.</p>
+                <p>Customs House Agent (CHA) License Partner | DGFT & ICEGATE Compliant</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons (WhatsApp & Quick Call) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <!-- WhatsApp Trigger Button -->
+        <a href="https://wa.me/919876543210?text=Hello%20Bharat%20Trade%20Solutions,%20I%20need%20assistance%20with%20Import/Export%20documentation%20and%20customs%20clearance." target="_blank" class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        
+        <!-- Callback Modal Trigger Button -->
+        <button onclick="openModal('quickQuoteModal')" class="w-12 h-12 rounded-full bg-amber-500 text-slate-950 flex items-center justify-center text-xl shadow-2xl hover:scale-110 transition-transform">
+            <i class="fa-solid fa-headset"></i>
+        </button>
+    </div>
+
+    <!-- MAIN MODAL: Quick Quote & Inquiry Form -->
+    <div id="quickQuoteModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="glass-panel bg-navy-900 rounded-2xl max-w-lg w-full p-6 sm:p-8 border border-amber-500/30 relative max-h-[90vh] overflow-y-auto">
+            
+            <button onclick="closeModal('quickQuoteModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Instant Trade Inquiry</span>
+                <h3 class="text-2xl font-extrabold text-white">Get Custom Freight & Clearance Rates</h3>
+                <p class="text-xs text-slate-400 mt-1">Submit your trade requirements to receive a fast quote from our CHA desk.</p>
+            </div>
+
+            <form id="leadCaptureForm" onsubmit="handleLeadSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Company / Contact Name *</label>
+                    <input type="text" id="leadName" required placeholder="e.g. Ramesh Kumar (Agro Exports)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Phone / Mobile *</label>
+                        <input type="tel" id="leadPhone" required placeholder="+91 9876543210" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Trade Direction *</label>
+                        <select id="leadTradeType" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+                            <option value="Export from India">Export from India</option>
+                            <option value="Import to India">Import to India</option>
+                            <option value="Both / Advisory">Both / Complete Advisory</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Cargo Category</label>
+                        <select id="leadCargoCategory" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+                            <option value="Machinery & Parts">Machinery & Industrial</option>
+                            <option value="Textiles & Apparel">Textiles & Apparel</option>
+                            <option value="Agro & Food Products">Agro & Food Commodities</option>
+                            <option value="Chemicals & Polymers">Chemicals & Pharmaceuticals</option>
+                            <option value="Electronics & Misc">Electronics & General Goods</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Primary Port of Choice</label>
+                        <select id="leadPort" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+                            <option value="JNPT / Nhava Sheva">Nhava Sheva (JNPT), Mumbai</option>
+                            <option value="Mundra Port">Mundra Port, Gujarat</option>
+                            <option value="Chennai / South Ports">Chennai / Tuticorin</option>
+                            <option value="Air Cargo ICD">Air Cargo (Delhi/Mumbai/Blr)</option>
+                            <option value="Other / Need Help">Other / Need Port Advice</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Cargo Volume / Specific Requirements</label>
+                    <textarea id="leadMessage" rows="3" placeholder="Specify container size (20ft/40ft), weight, estimated shipment date, or documentation questions..." class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full gold-button text-slate-950 font-bold py-3 rounded-lg text-sm shadow-xl transition-all">
+                    Generate Rate Quote & Request Call
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: Service Detail Checklist Modal -->
+    <div id="serviceDetailModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="glass-panel bg-navy-900 rounded-2xl max-w-xl w-full p-6 sm:p-8 border border-amber-500/30 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('serviceDetailModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="serviceModalContent">
+                <!-- Content inserted dynamically by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Toggle Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Modal Controls
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        // Close modal when clicking outside box
+        window.addEventListener('click', (e) => {
+            const modals = ['quickQuoteModal', 'serviceDetailModal'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+
+        // FAQ Accordion Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Trade Duty & Route Estimator Logic
+        function calculateEstimate() {
+            const tradeType = document.getElementById('estTradeType').value;
+            const category = document.getElementById('estCargoCategory').value;
+            const cargoValue = parseFloat(document.getElementById('estCargoValue').value) || 1000000;
+            const mode = document.getElementById('estMode').value;
+            const region = document.getElementById('estRegion').value;
+
+            // Duty Multiplier Matrix (Approximate illustrative ranges for India EXIM)
+            let minDutyPct = 0.075;
+            let maxDutyPct = 0.15;
+
+            if (category === 'textiles') { minDutyPct = 0.10; maxDutyPct = 0.20; }
+            else if (category === 'electronics') { minDutyPct = 0.10; maxDutyPct = 0.18; }
+            else if (category === 'food') { minDutyPct = 0.15; maxDutyPct = 0.30; }
+            else if (category === 'machinery') { minDutyPct = 0.075; maxDutyPct = 0.12; }
+
+            if (tradeType === 'export') {
+                // Export duties in India are 0% for most items (with drawbacks)
+                minDutyPct = 0;
+                maxDutyPct = 0.02;
+            }
+
+            const minDuty = Math.round(cargoValue * minDutyPct);
+            const maxDuty = Math.round(cargoValue * maxDutyPct);
+
+            // Timeline calculations based on mode & region
+            let clearanceTime = '24 - 48 Hours';
+            let transitTime = '12 - 18 Days';
+
+            if (mode === 'air') {
+                clearanceTime = '12 - 24 Hours';
+                if (region === 'asia' || region === 'middleeast') transitTime = '2 - 4 Days (Air)';
+                else transitTime = '4 - 6 Days (Air)';
+            } else {
+                if (region === 'middleeast') transitTime = '3 - 6 Days (Sea)';
+                else if (region === 'asia') transitTime = '8 - 14 Days (Sea)';
+                else if (region === 'europe') transitTime = '18 - 25 Days (Sea)';
+                else if (region === 'americas') transitTime = '24 - 32 Days (Sea)';
+                else transitTime = '15 - 22 Days (Sea)';
+            }
+
+            // Update UI
+            document.getElementById('resDutyRange').innerText = tradeType === 'export' 
+                ? '₹0 - Zero Duty (Eligible for Incentives)'
+                : `₹${minDuty.toLocaleString('en-IN')} - ₹${maxDuty.toLocaleString('en-IN')}`;
+
+            document.getElementById('resClearanceTime').innerText = clearanceTime;
+            document.getElementById('resTransitTime').innerText = transitTime;
+
+            showToast('Estimate updated based on current trade parameters!', 'info');
+        }
+
+        // Service Modal Dynamic Content Filler
+        function openServiceDetail(type) {
+            const modalContent = document.getElementById('serviceModalContent');
+            
+            if (type === 'customs') {
+                modalContent.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-file-shield text-amber-400 text-2xl"></i>
+                            <h3 class="text-xl font-bold text-white">Customs Clearance Checklist</h3>
+                        </div>
+                        <p class="text-xs text-slate-300">Complete verification handled by our licensed Customs House Agents (CHA):</p>
+                        <ul class="text-xs space-y-2 text-slate-300 border-y border-slate-800 py-3">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i> Advance Bill of Entry / Shipping Bill Filing</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i> HNS 8-Digit Classification & Duty Assessment</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i> Port Customs Physical Examination & Dock Supervision</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i> Partner Government Agency (PGA) Clearances: FSSAI, BIS, AQCS</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i> Duty Payment Escrow & Gate Pass Generation</li>
+                        </ul>
+                        <button onclick="closeModal('serviceDetailModal'); openModal('quickQuoteModal')" class="w-full gold-button text-slate-950 font-bold py-2.5 rounded-lg text-xs">
+                            Assign My Customs Clearance File
+                        </button>
+                    </div>
+                `;
+            } else if (type === 'docs') {
+                modalContent.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-passport text-amber-400 text-2xl"></i>
+                            <h3 class="text-xl font-bold text-white">Trade Documentation Kit</h3>
+                        </div>
+                        <p class="text-xs text-slate-300">Errors in paperwork cause 80% of port delays. We prepare:</p>
+                        <ul class="text-xs space-y-2 text-slate-300 border-y border-slate-800 py-3">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-amber-400"></i> Commercial Invoice & Detailed Packing List (CIPL)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-amber-400"></i> Certificate of Origin (Preferential / Non-Preferential)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-amber-400"></i> Letter of Credit (LC) Vetting & Bank Drafts</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-amber-400"></i> Bill of Lading (BL) & Master Airway Bill (MAWB)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-amber-400"></i> AD Code Registration with ICEGATE Port Systems</li>
+                        </ul>
+                        <button onclick="closeModal('serviceDetailModal'); openModal('quickQuoteModal')" class="w-full gold-button text-slate-950 font-bold py-2.5 rounded-lg text-xs">
+                            Request Documentation Audit
+                        </button>
+                    </div>
+                `;
+            } else if (type === 'logistics') {
+                modalContent.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-truck-fast text-amber-400 text-2xl"></i>
+                            <h3 class="text-xl font-bold text-white">Freight Forwarding Solutions</h3>
+                        </div>
+                        <p class="text-xs text-slate-300">Multimodal ocean and air carrier networks:</p>
+                        <ul class="text-xs space-y-2 text-slate-300 border-y border-slate-800 py-3">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-ship text-amber-400"></i> FCL (Full Container Load) 20ft / 40ft / High Cube</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-boxes-stacked text-amber-400"></i> LCL (Less than Container Load) Shared Freight</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-plane text-amber-400"></i> Air Express Cargo & Charter Options</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-truck text-amber-400"></i> First-Mile Factory Pickup & Last-Mile Delivery</li>
+                        </ul>
+                        <button onclick="closeModal('serviceDetailModal'); openModal('quickQuoteModal')" class="w-full gold-button text-slate-950 font-bold py-2.5 rounded-lg text-xs">
+                            Get Freight Rates
+                        </button>
+                    </div>
+                `;
+            } else {
+                modalContent.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-lightbulb text-amber-400 text-2xl"></i>
+                            <h3 class="text-xl font-bold text-white">EXIM Expansion & Advisory</h3>
+                        </div>
+                        <p class="text-xs text-slate-300">Complete legal and financial roadmap for new exporters:</p>
+                        <ul class="text-xs space-y-2 text-slate-300 border-y border-slate-800 py-3">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-amber-400"></i> Export Costing & Incoterms Selection</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-amber-400"></i> Government Incentive Maximization (RoDTEP, Duty Drawback)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-amber-400"></i> International Buyer Payment Security Protocols</li>
+                        </ul>
+                        <button onclick="closeModal('serviceDetailModal'); openModal('quickQuoteModal')" class="w-full gold-button text-slate-950 font-bold py-2.5 rounded-lg text-xs">
+                            Book Advisory Session
+                        </button>
+                    </div>
+                `;
+            }
+
+            openModal('serviceDetailModal');
+        }
+
+        // Form Submission Handlers
+        function handleLeadSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('leadName').value;
+            const phone = document.getElementById('leadPhone').value;
+            const tradeType = document.getElementById('leadTradeType').value;
+
+            closeModal('quickQuoteModal');
+            showToast(`Thank you, ${name}! Your inquiry for ${tradeType} has been recorded. Our trade specialist will call ${phone} shortly.`, 'success');
+            document.getElementById('leadCaptureForm').reset();
+        }
+
+        function handleConsultationSubmit(e) {
+            e.preventDefault();
+            showToast('Consultation booked! An EXIM representative will contact you on WhatsApp.', 'success');
+            document.getElementById('consultationForm').reset();
+        }
+
+        // Custom Toast Notification System
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            
+            toast.className = `p-4 rounded-xl text-xs font-semibold shadow-2xl flex items-center gap-3 border transition-all duration-300 transform translate-y-2 max-w-md ${
+                type === 'success' 
+                    ? 'bg-slate-900 border-emerald-500 text-emerald-400' 
+                    : 'bg-slate-900 border-amber-500 text-amber-400'
+            }`;
+
+            toast.innerHTML = `
+                <i class="${type === 'success' ? 'fa-solid fa-circle-check text-emerald-400' : 'fa-solid fa-circle-info text-amber-400'} text-base"></i>
+                <span class="flex-1 text-slate-200">${message}</span>
+                <button onclick="this.parentElement.remove()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', '-translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
